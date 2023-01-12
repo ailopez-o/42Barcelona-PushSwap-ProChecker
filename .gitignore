@@ -1,5 +1,7 @@
 # Prerequisites
 *.d
+push_swap
+pro_checker
 
 # Object files
 *.o
