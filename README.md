@@ -2,10 +2,10 @@
 
 <p align="center">
 	<img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/ailopez-o/42Barcelona-push_swap?color=lightblue" />
-	<img alt="Number of lines of code" src="https://img.shields.io/tokei/lines/github/ailopez-o/42Barcelona-push_swap?color=critical" />
-	<img alt="Code language count" src="https://img.shields.io/github/languages/count/ailopez-o/42Barcelona-push_swap?color=yellow" />
-	<img alt="GitHub top language" src="https://img.shields.io/github/languages/top/ailopez-o/42Barcelona-push_swap?color=blue" />
-	<img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/ailopez-o/42Barcelona-push_swap?color=green" />
+	<img alt="Number of lines of code" src="https://img.shields.io/tokei/lines/github/ailopez-o/42Barcelona-push_swap-prochecker?color=critical" />
+	<img alt="Code language count" src="https://img.shields.io/github/languages/count/ailopez-o/42Barcelona-push_swap-prochecker?color=yellow" />
+	<img alt="GitHub top language" src="https://img.shields.io/github/languages/top/ailopez-o/42Barcelona-push_swap-prochecker?color=blue" />
+	<img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/ailopez-o/42Barcelona-push_swap-prochecker?color=green" />
 </p>
 
 ## Visual Checker to Debug the development of Push_Swap Proyect
@@ -20,7 +20,7 @@ Is works like the oficial checher but with GUI and step by step functionality
 
 Pull files ↙️
 ```bash
-git clone --recursive https://github.com/ailopez-o/42Barcelona-Push_swap.git
+git clone --recursive https://github.com/ailopez-o/42Barcelona-PushSwap-ProChecker.git
 ```
 Compile both push_swap & checker ↙️
 
@@ -32,7 +32,6 @@ $ make
 
 $>ARG="4 67 3 87 23"; ./push_swap $ARG | ./pro_checker $ARG
 OK
-$>
 ```
 
 
