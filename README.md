@@ -34,12 +34,14 @@ $ make
 ```
 ### Execution example
 ```
-$>ARG="4 67 3 87 23"; ./push_swap $ARG | ./pro_checker $ARG
+bash
+ARG="4 67 3 87 23"; ./push_swap $ARG | ./pro_checker $ARG
 ```
 
 ### Execution example with randomice nums
 ```
-$>ARG=$(ruby -e "puts (0..500).to_a.shuffle.join(' ')"); ./push_swap $ARG | ./pro_checker $ARG
+bash
+ARG=$(ruby -e "puts (0..500).to_a.shuffle.join(' ')"); ./push_swap $ARG | ./pro_checker $ARG
 ```
 
 ## Controles 🕹
