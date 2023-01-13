@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   gui_utils.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aitoraudicana <aitoraudicana@student.42    +#+  +:+       +#+        */
+/*   By: ailopez- <ailopez-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 21:36:01 by aitoraudi         #+#    #+#             */
-/*   Updated: 2023/01/13 13:23:08 by aitoraudica      ###   ########.fr       */
+/*   Updated: 2023/01/13 23:33:56 by ailopez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,9 @@ int	key_press(int key, void *param)
 	if (key == KEY_I)
 		execute_next_op(meta);
 	if (key == KEY_S)
-		while (!execute_next_op(meta))
+		meta->run = 1;
+	if (key == KEY_P)
+		meta->run = 0;
 	gui(meta);
 	return (1);
 }

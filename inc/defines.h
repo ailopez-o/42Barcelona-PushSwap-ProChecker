@@ -6,7 +6,7 @@
 /*   By: ailopez- <ailopez-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/29 17:41:33 by aitoraudica       #+#    #+#             */
-/*   Updated: 2023/01/13 22:52:40 by ailopez-         ###   ########.fr       */
+/*   Updated: 2023/01/13 23:29:49 by ailopez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -114,6 +114,7 @@ typedef struct s_meta {
 	int			neg;
 	int			numops;
 	int			numops_load;
+	char		run;	
 }	t_meta;
 
 

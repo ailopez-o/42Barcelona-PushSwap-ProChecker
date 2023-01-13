@@ -6,7 +6,7 @@
 /*   By: ailopez- <ailopez-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 10:22:37 by aitorlope         #+#    #+#             */
-/*   Updated: 2023/01/13 22:48:43 by ailopez-         ###   ########.fr       */
+/*   Updated: 2023/01/13 23:35:22 by ailopez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,4 +85,13 @@ int	execute_next_op(t_meta *meta)
 		return (EXIT_SUCCESS);
 	}
 	return (EXIT_FAILURE);
+}
+
+void	run_ops(void *param)
+{	
+	t_meta	*meta;
+	
+	meta = (t_meta *)param;
+	if (meta->run)
+		execute_next_op(meta);
 }

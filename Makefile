@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: aitoraudicana <aitoraudicana@student.42    +#+  +:+       +#+         #
+#    By: ailopez- <ailopez-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/29 17:49:21 by aitoraudica       #+#    #+#              #
-#    Updated: 2023/01/13 13:10:51 by aitoraudica      ###   ########.fr        #
+#    Updated: 2023/01/13 23:19:58 by ailopez-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 

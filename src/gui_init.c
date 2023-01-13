@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   gui_init.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aitoraudicana <aitoraudicana@student.42    +#+  +:+       +#+        */
+/*   By: ailopez- <ailopez-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 01:02:41 by aitorlope         #+#    #+#             */
-/*   Updated: 2023/01/13 12:14:54 by aitoraudica      ###   ########.fr       */
+/*   Updated: 2023/01/13 23:23:21 by ailopez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #include "../libs/miniliblx/minilibx_macos/mlx.h"
 #include "../inc/gui.h"
 #include "../inc/gui_utils.h"
+#include "../inc/exec_ops.h"
 
 void	gui_init(t_meta *meta)
 {
@@ -30,5 +31,6 @@ void	gui_loop(t_meta *meta)
 	draw_push_swap(meta);
 	mlx_hook(meta->vars.win, 2, 0, key_press, meta);
 	mlx_hook(meta->vars.win, 17, 0, terminate_program, meta);
+	mlx_loop_hook(meta->vars.mlx, run_ops, meta);
 	mlx_loop(meta->vars.mlx);
 }

@@ -6,7 +6,7 @@
 /*   By: ailopez- <ailopez-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/29 17:56:23 by aitoraudi         #+#    #+#             */
-/*   Updated: 2023/01/13 22:49:05 by ailopez-         ###   ########.fr       */
+/*   Updated: 2023/01/13 23:03:47 by ailopez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ int	main(int argv, char **argc)
 	meta.print_ops = 1;
 	meta.print_stack = 0;
 	meta.gui = 1;
+	meta.run = 0;
 	gui_init(&meta);
 	if (stack_ini(&meta, argc))
 		end_program ("Error");
