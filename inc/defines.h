@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   defines.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aitoraudicana <aitoraudicana@student.42    +#+  +:+       +#+        */
+/*   By: ailopez- <ailopez-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/29 17:41:33 by aitoraudica       #+#    #+#             */
-/*   Updated: 2023/01/13 13:27:04 by aitoraudica      ###   ########.fr       */
+/*   Updated: 2023/01/13 22:52:40 by ailopez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,14 +106,14 @@ typedef struct s_meta {
 	t_op		*ops;
 	int			gui;
 	int			print_stack;
-	int			print_ops;	
+	int			print_ops;
 	int			stack_size;
 	int			max;
 	int			min;
 	int			abs;
 	int			neg;
 	int			numops;
-	int			numops_load;	
+	int			numops_load;
 }	t_meta;
 
 

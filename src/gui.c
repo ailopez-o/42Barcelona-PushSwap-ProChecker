@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   gui.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aitoraudicana <aitoraudicana@student.42    +#+  +:+       +#+        */
+/*   By: ailopez- <ailopez-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 21:36:12 by aitoraudi         #+#    #+#             */
-/*   Updated: 2023/01/13 00:53:05 by aitoraudica      ###   ########.fr       */
+/*   Updated: 2023/01/13 22:51:52 by ailopez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -135,6 +135,11 @@ int	draw_push_swap(t_meta *meta)
 		mlx_string_put(meta->vars.mlx, meta->vars.win, WINX - 280, \
 		WINY - 30, VERDE, print);
 		free (print);
+	}
+	else
+	{
+		mlx_string_put(meta->vars.mlx, meta->vars.win, WINX - 280, \
+		WINY - 30, VERDE, ">NO OPS");
 	}
 	if (meta->stack_a)
 	{	
