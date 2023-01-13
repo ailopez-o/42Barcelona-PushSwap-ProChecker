@@ -24,23 +24,21 @@ The main goal is to provide a useful and visual tool to see inside yout algorith
 Is works like the oficial checher but with GUI and step by step functionality
 
 Pull files ↙️
-```bash
+```
 git clone --recursive https://github.com/ailopez-o/42Barcelona-PushSwap-ProChecker.git
 ```
-Compile both push_swap & checker ↙️
+Compile the program ↙️
 
-```bash
-$ make
 ```
-### Execution example
+Make
 ```
-bash
+### Execution example, important to do in bash shell (execute bash previously)
+```
 ARG="4 67 3 87 23"; ./push_swap $ARG | ./pro_checker $ARG
 ```
 
-### Execution example with randomice nums
+### Execution example with randomice nums, important to do in bash shell (execute bash previously)
 ```
-bash
 ARG=$(ruby -e "puts (0..500).to_a.shuffle.join(' ')"); ./push_swap $ARG | ./pro_checker $ARG
 ```
 
