@@ -56,7 +56,7 @@ ARG=$(ruby -e "puts (0..500).to_a.shuffle.join(' ')"); ./push_swap $ARG | ./pro_
 |`6`| exec 'rrb'|
 |`7`| exec 'pa'|
 |`8`| exec 'pb'|
-|`ESC ❌`|Cierra la ventana|
+|`ESC ❌`|Close|
 
 
 ### PushSwap Game rules
