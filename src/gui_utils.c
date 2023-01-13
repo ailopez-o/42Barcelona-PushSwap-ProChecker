@@ -6,7 +6,7 @@
 /*   By: aitoraudicana <aitoraudicana@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 21:36:01 by aitoraudi         #+#    #+#             */
-/*   Updated: 2023/01/13 00:08:56 by aitoraudica      ###   ########.fr       */
+/*   Updated: 2023/01/13 11:56:23 by aitoraudica      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,16 +20,6 @@
 #include "../inc/print.h"
 #include "../inc/exec_ops.h"
 
-int	terminate_program(void *param)
-{
-	t_meta	*meta;
-
-	meta = (t_meta *)param;
-	mlx_destroy_window(meta->vars.mlx, meta->vars.win);
-	stack_lstfree(&meta->stack_a);
-	stack_lstfree(&meta->stack_b);
-	exit(0);
-}
 
 int	key_press(int key, void *param)
 {
@@ -38,8 +28,6 @@ int	key_press(int key, void *param)
 	meta = (t_meta *)param;
 	if (key == KEY_ESC)
 		terminate_program(meta);
-	//if (key == KEY_S)
-	//	sort(meta);
 	if (key == KEY_1)
 		sa(meta);
 	if (key == KEY_2)
@@ -101,8 +89,6 @@ int	gui(t_meta *meta)
 	meta->numops++;
 	if (meta->gui)
 		draw_push_swap(meta);
-	// if (meta->print_ops)
-	// 	ft_putstr_fd(op, 1);
 	if (meta->print_stack)
 		print_stack (meta->stack_a, meta->stack_b);
 	return (1);

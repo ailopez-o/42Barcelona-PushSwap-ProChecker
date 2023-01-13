@@ -6,23 +6,40 @@
 /*   By: aitoraudicana <aitoraudicana@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/29 17:56:23 by aitoraudi         #+#    #+#             */
-/*   Updated: 2023/01/12 23:51:31 by aitoraudica      ###   ########.fr       */
+/*   Updated: 2023/01/13 11:58:20 by aitoraudica      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/defines.h"
 #include "../libs/libft/libft.h"
+#include "../libs/miniliblx/minilibx_macos/mlx.h"
 #include "../inc/lst_utils.h"
 #include "../inc/exec_ops.h"
 #include "../inc/parser.h"
 #include "../inc/gui_utils.h"
 #include <stddef.h>
 
-void	end_program(char	*str)
+void	end_program(char	*str);
+int		terminate_program(void *param);
+void	load_instructions(t_meta *meta);
+
+
+int	main(int argv, char **argc)
 {
-	ft_putstr_fd(str, 2);
-	ft_putstr_fd("\n", 2);
-	exit (0);
+	t_meta	meta;
+
+	if (argv == 1)
+		return (0);
+	meta.print_ops = 1;
+	meta.print_stack = 0;
+	meta.gui = 1;
+	gui_init(&meta);
+	if (stack_ini(&meta, argc))
+		end_program ("Error");
+	index_list(meta.stack_a);
+	load_instructions(&meta);
+	gui_loop(&meta);
+	return (0);
 }
 
 void	load_instructions(t_meta *meta)
@@ -35,11 +52,6 @@ void	load_instructions(t_meta *meta)
 	op = get_next_line(STDIN_FILENO);
 	while (op)
 	{
-		// if (exec_ops(meta, op) == 0)
-		// {
-		// 	free (op);
-		// 	end_program("Error");
-		// }
 		new_op = malloc(sizeof (t_op));
 		if (new_op == NULL)
 			end_program("Malloc Error");
@@ -60,29 +72,20 @@ void	load_instructions(t_meta *meta)
 }
 
 
-
-int	main(int argv, char **argc)
+int	terminate_program(void *param)
 {
-	t_meta	meta;
-	int		sorted;
+	t_meta	*meta;
 
-	if (argv == 1)
-		return (0);
-	meta.print_ops = 1;
-	meta.print_stack = 0;
-	meta.gui = 1;
-	gui_init(&meta);
-	if (stack_ini(&meta, argc))
-		end_program ("Error");
-	index_list(meta.stack_a);
-	load_instructions(&meta);
-	gui_loop(&meta);
-	sorted = stack_is_sorted(meta.stack_a);
-	stack_lstfree(&meta.stack_a);
-	stack_lstfree(&meta.stack_b);
-	if (sorted)
-		end_program ("OK");
-	else
-		end_program ("KO");
-	return (0);
+	meta = (t_meta *)param;
+	mlx_destroy_window(meta->vars.mlx, meta->vars.win);
+	stack_lstfree(&meta->stack_a);
+	stack_lstfree(&meta->stack_b);
+	exit(0);
+}
+
+void	end_program(char	*str)
+{
+	ft_putstr_fd(str, 2);
+	ft_putstr_fd("\n", 2);
+	exit (0);
 }
