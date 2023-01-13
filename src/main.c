@@ -6,7 +6,7 @@
 /*   By: aitoraudicana <aitoraudicana@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/29 17:56:23 by aitoraudi         #+#    #+#             */
-/*   Updated: 2023/01/13 11:58:20 by aitoraudica      ###   ########.fr       */
+/*   Updated: 2023/01/13 13:32:44 by aitoraudica      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 void	end_program(char	*str);
 int		terminate_program(void *param);
 void	load_instructions(t_meta *meta);
-
+void	print_controls();
 
 int	main(int argv, char **argc)
 {
@@ -38,8 +38,35 @@ int	main(int argv, char **argc)
 		end_program ("Error");
 	index_list(meta.stack_a);
 	load_instructions(&meta);
+	print_controls(meta.numops_load);
 	gui_loop(&meta);
 	return (0);
+}
+
+void	print_controls(int num_ops_load)
+
+{
+ 	printf("%s ___  ___   ___     ___  _  _  ___  ___  _  __ ___  ___ \n", KGRN);
+ 	printf("| _ \\| _ \\ / _ \\   / __|| || || __|/ __|| |/ /| __|| _ \n");
+ 	printf("|  _/|   /| (_) | | (__ | __ || _|| (__ | ' < | _| |   /\n");
+ 	printf("|_|  |_|_\\ \\___/   \\___||_||_||___|\\___||_|\\_\\|___||_|_\n%s", DEF_COLOR);
+ 	printf("\nby @ailopez-\n");
+
+	printf("\n\n");
+	printf("%s[%d] instructions loaded'\n", KYEL, num_ops_load);
+	printf("%s::: Readed ops Sort :::\n", KCYN);
+	printf("%sKey I :: Step by step\n", KWHT);
+	printf("%sKey S :: Run all the ops\n", KWHT);
+	printf("%s::: Manual Sort :::\n", KCYN);
+	printf("%sKey 1 :: Exec 'sa'\n", KWHT);	
+	printf("%sKey 2 :: Exec 'sb'\n", KWHT);	
+	printf("%sKey 3 :: Exec 'ra'\n", KWHT);	
+	printf("%sKey 4 :: Exec 'rb'\n", KWHT);
+	printf("%sKey 5 :: Exec 'rra'\n", KWHT);	
+	printf("%sKey 6 :: Exec 'rrb'\n", KWHT);
+	printf("%sKey 7 :: Exec 'pa'\n", KWHT);	
+	printf("%sKey 8 :: Exec 'pb'\n", KWHT);
+	printf("%s\n",DEF_COLOR);
 }
 
 void	load_instructions(t_meta *meta)
@@ -68,6 +95,13 @@ void	load_instructions(t_meta *meta)
 			temp = meta->ops;
 		}
 		op = get_next_line(STDIN_FILENO);
+	}
+	meta->numops_load = 0;
+	temp = meta->ops;
+	while (temp)
+	{	
+		temp = temp->next;
+		meta->numops_load++;
 	}
 }
 

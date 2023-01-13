@@ -6,7 +6,7 @@
 /*   By: aitoraudicana <aitoraudicana@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/29 17:41:33 by aitoraudica       #+#    #+#             */
-/*   Updated: 2023/01/12 23:41:42 by aitoraudica      ###   ########.fr       */
+/*   Updated: 2023/01/13 13:27:04 by aitoraudica      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,24 @@
 # define FLAMINGO	0xEC4B27
 # define JAFFA		0xEF8633
 # define SAFFRON	0xF3AF3D
+
+//--/ Printf colors
+# define DEF_COLOR	"\033[0;39m"
+# define GRAY		"\033[0;90m"
+# define RED		"\033[0;91m"
+# define GREEN		"\033[0;92m"
+# define YELLOW		"\033[0;93m"
+# define BLUE		"\033[0;94m"
+# define MAGENTA	"\033[0;95m"
+# define CYAN 		"\033[0;96m"
+# define KNRM		"\x1B[0m"
+# define KRED		"\x1B[31m"
+# define KGRN		"\x1B[32m"
+# define KYEL		"\x1B[33m"
+# define KBLU		"\x1B[34m"
+# define KMAG		"\x1B[35m"
+# define KCYN		"\x1B[36m"
+# define KWHT		"\x1B[37m"
 
 typedef struct s_stack
 {
@@ -95,6 +113,7 @@ typedef struct s_meta {
 	int			abs;
 	int			neg;
 	int			numops;
+	int			numops_load;	
 }	t_meta;
 
 

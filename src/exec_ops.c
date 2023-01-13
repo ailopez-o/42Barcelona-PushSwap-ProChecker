@@ -6,7 +6,7 @@
 /*   By: aitoraudicana <aitoraudicana@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 10:22:37 by aitorlope         #+#    #+#             */
-/*   Updated: 2023/01/13 11:54:36 by aitoraudica      ###   ########.fr       */
+/*   Updated: 2023/01/13 13:23:22 by aitoraudica      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,37 +75,14 @@ int	exec_ops(t_meta *meta, char *op)
 }
 
 int	execute_next_op(t_meta *meta)
-{
-	t_op	*temp;
-	
+{	
 	if (meta->ops)
 	{
+		meta->numops++;
 		exec_ops(meta, meta->ops->op);
-		temp = meta->ops;
 		meta->ops = meta->ops->next;
-		free(temp->op);
-		free(temp);
 		gui(meta);
 		return (EXIT_SUCCESS);
 	}
 	return (EXIT_FAILURE);
-}
-
-
-void	get_instructions(t_meta *meta)
-{
-	char	*op;
-
-	op = get_next_line(STDIN_FILENO);
-	while (op)
-	{
-		if (exec_ops(meta, op) == 0)
-		{
-			free (op);
-			end_program("Error");
-		}
-		gui(meta);
-		free (op);
-		op = get_next_line(STDIN_FILENO);
-	}
 }
