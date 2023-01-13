@@ -47,7 +47,8 @@ ARG=$(ruby -e "puts (0..500).to_a.shuffle.join(' ')"); ./push_swap $ARG | ./pro_
 |TECLA|ACCION|
 |---|---|
 |`I`| Step by Step instructions|
-|`R`| Run all the instructions|
+|`S`| Run all the instructions|
+|`P`| Pause|
 |`1`| exec 'sa'|
 |`2`| exec 'sb'|
 |`3`| exec 'ra'|
