@@ -2,6 +2,7 @@
 *.d
 push_swap
 pro_checker
+.vscode
 
 # Object files
 *.o
