@@ -6,7 +6,7 @@
 /*   By: ailopez- <ailopez-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/29 17:56:23 by aitoraudi         #+#    #+#             */
-/*   Updated: 2023/01/13 23:03:47 by ailopez-         ###   ########.fr       */
+/*   Updated: 2023/01/14 00:01:05 by ailopez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,7 @@ void	print_controls(int num_ops_load)
 	printf("%s::: Readed ops Sort :::\n", KCYN);
 	printf("%sKey I :: Step by step\n", KWHT);
 	printf("%sKey S :: Run all the ops\n", KWHT);
+	printf("%sKey P :: Pause\n", KWHT);	
 	printf("%s::: Manual Sort :::\n", KCYN);
 	printf("%sKey 1 :: Exec 'sa'\n", KWHT);	
 	printf("%sKey 2 :: Exec 'sb'\n", KWHT);	
