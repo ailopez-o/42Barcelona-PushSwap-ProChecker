@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aitoraudicana <aitoraudicana@student.42    +#+  +:+       +#+        */
+/*   By: ailopez- <ailopez-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/29 17:56:23 by aitoraudi         #+#    #+#             */
-/*   Updated: 2023/01/13 13:32:44 by aitoraudica      ###   ########.fr       */
+/*   Updated: 2023/01/13 16:41:59 by ailopez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,6 +77,7 @@ void	load_instructions(t_meta *meta)
 
 	new_op = NULL;
 	op = get_next_line(STDIN_FILENO);
+	meta->ops = NULL;
 	while (op)
 	{
 		new_op = malloc(sizeof (t_op));
