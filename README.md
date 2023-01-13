@@ -1,4 +1,4 @@
-# 42-push_swap PRO CHECKER
+# PUSH SWAP PRO CHECKER
 
 <p align="center">
 	<img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/ailopez-o/42Barcelona-push_swap?color=lightblue" />
@@ -8,10 +8,9 @@
 	<img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/ailopez-o/42Barcelona-push_swap-prochecker?color=green" />
 </p>
 
-## Visual Checker to Debug the development of Push_Swap Proyect
 
 <p align="center">
-	<img src="https://github.com/ailopez-o/42Barcelona-push_swap/blob/main/img/push_swap_2.png" />
+	<img src="https://github.com/ailopez-o/42Barcelona-PushSwap-ProChecker/blob/main/img/prochecker-ailopez-o.png?raw=true" />
 </p>
 
 The main goal is to provide a useful and visual tool to see inside yout algorithm of sorting and try to get your bugs.
