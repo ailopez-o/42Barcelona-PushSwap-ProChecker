@@ -22,7 +22,7 @@
 void	end_program(char	*str);
 int		terminate_program(void *param);
 void	load_instructions(t_meta *meta);
-void	print_controls();
+void	print_controls(int num_ops_load);
 
 int	main(int argv, char **argc)
 {
